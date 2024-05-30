@@ -1,13 +1,18 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
+import React from "react";
+import DisplayUsers from "./page/DisplayUsers";
+import { Route, Routes } from "react-router-dom";
+import Update from "./page/Update";
+import CreateUser from "./page/CreateUser";
 function App() {
-  const users= useSelector(state=>state.users);
-  console.log(users)
   return (
-    <div>
-      <h1>User Data</h1>
-    </div>
-  )
+    <Routes>
+      <Route path="/"  element={<DisplayUsers/>}/>
+      <Route path="/update-user-data" element={<Update/>} />
+      <Route  path="/createnewuser" element={<CreateUser/>} />
+    </Routes>
+     
+    
+  );
 }
 
-export default App
+export default App;
