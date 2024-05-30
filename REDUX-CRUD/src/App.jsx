@@ -7,7 +7,7 @@ function App() {
   return (
     <Routes>
       <Route path="/"  element={<DisplayUsers/>}/>
-      <Route path="/update-user-data" element={<Update/>} />
+      <Route path="/update-user-data/:id" element={<Update/>} />
       <Route  path="/createnewuser" element={<CreateUser/>} />
     </Routes>
      

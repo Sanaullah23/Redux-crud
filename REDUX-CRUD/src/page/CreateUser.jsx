@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import { createUser } from '../reducers/userReducer';
 const CreateUser = () => {
     const dispatch = useDispatch()
-    const [id, setId]= useState('');
+    const [id, setId]= useState(null);
     const [name, setName]= useState('');
     const [email, setEmail]= useState('')
     const navigate = useNavigate()
